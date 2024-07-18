@@ -4,12 +4,29 @@ public class Program {
       int modulos = 10;
       int result = 0;
 
-      for (int i = 0 ; i < 6 ; i++){
-        int del = input % modulos;
-        input -= del;
-        result += del / (modulos / 10);
-        modulos *= 10;
-      }
+      int del = input % modulos;
+      input /= modulos;
+      result += del;
+
+      del = input % modulos;
+      input /= modulos;
+      result += del;
+
+      del = input % modulos;
+      input /= modulos;
+      result += del;
+
+      del = input % modulos;
+      input /= modulos;
+      result += del;
+
+      del = input % modulos;
+      input /= modulos;
+      result += del;
+
+      del = input % modulos;
+      result += del;
+
       System.out.println(result);
     }
   } 
